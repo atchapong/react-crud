@@ -12,8 +12,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import axios from "axios";
-import DeleteIcon from "@mui/icons-material/Delete";
-import SaveAsIcon from '@mui/icons-material/SaveAs';
+import {Delete} from "@mui/icons-material";
+import {SaveAs} from '@mui/icons-material';
 import { Alert, IconButton, Modal } from "@mui/material";
 import Swal from "sweetalert2";
 import { Route, useLocation, Link } from "react-router-dom";
@@ -133,7 +133,7 @@ export default function User() {
                     <TableCell align="center">{row.update_at}</TableCell>
                     <TableCell align="center">
                       <Link to={{pathname: `/users/update/${row._id}`}}>
-                        <IconButton aria-label="update"><SaveAsIcon /></IconButton>
+                        <IconButton aria-label="update"><SaveAs /></IconButton>
                       </Link>
                       <IconButton
                         aria-label="delete"
@@ -141,7 +141,7 @@ export default function User() {
                           deleteData(row._id);
                         }}
                       >
-                        <DeleteIcon />
+                        <Delete />
                       </IconButton>
                     </TableCell>
                   </TableRow>

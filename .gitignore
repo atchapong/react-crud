@@ -1,0 +1,5 @@
+./api/node_modules
+./api/package-lock.json
+
+./fe/crud-react/node_modules
+./fe/crud-react/package-lock.json
