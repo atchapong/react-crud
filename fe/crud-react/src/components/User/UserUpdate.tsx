@@ -23,7 +23,7 @@ export default function UserUpdate() {
 
   React.useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/users/${id}`, {
+      .get(`${import.meta.env.VITE_API}/api/users/${id}`, {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
@@ -71,7 +71,7 @@ console.log(data)
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .put("http://localhost:3000/api/users/update", {
+          .put(`${import.meta.env.VITE_API}/api/users/update`, {
             id: id,
             username: username,
             age: age,

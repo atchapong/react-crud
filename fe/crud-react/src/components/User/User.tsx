@@ -24,7 +24,7 @@ export default function User() {
 
   React.useEffect(() => {
     axios
-      .post(`http://localhost:3000/api/users/`, {
+      .post(`${import.meta.env.VITE_API}/api/users/`, {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
@@ -53,7 +53,7 @@ export default function User() {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:3000/api/users/${id}`, {
+          .delete(`${import.meta.env.VITE_API}/api/users/${id}`, {
             headers: {
               "Access-Control-Allow-Origin": "*",
               "Access-Control-Allow-Methods":

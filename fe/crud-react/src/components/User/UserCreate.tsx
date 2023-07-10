@@ -27,7 +27,7 @@ export default function UserCreate() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .post("http://localhost:3000/api/users/create", {
+          .post(`${import.meta.env.VITE_API}/api/users/create`, {
             "username": username,
             "age": age
         })
