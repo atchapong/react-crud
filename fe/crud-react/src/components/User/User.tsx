@@ -14,9 +14,9 @@ import Paper from "@mui/material/Paper";
 import axios from "axios";
 import {Delete} from "@mui/icons-material";
 import {SaveAs} from '@mui/icons-material';
-import { Alert, IconButton, Modal } from "@mui/material";
+import { IconButton } from "@mui/material";
 import Swal from "sweetalert2";
-import { Route, useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function User() {
   const [data, setData] = React.useState([]);
@@ -76,19 +76,6 @@ export default function User() {
       }
     });
   };
-
-  const styleModal = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    bgcolor: "background.paper",
-    border: "2px solid #00A7D3",
-    boxShadow: 0,
-    p: 4,
-  };
-
   return (
     <React.Fragment>
       <CssBaseline />
@@ -137,7 +124,7 @@ export default function User() {
                       </Link>
                       <IconButton
                         aria-label="delete"
-                        onClick={(e) => {
+                        onClick={() => {
                           deleteData(row._id);
                         }}
                       >

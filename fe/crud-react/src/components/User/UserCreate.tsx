@@ -1,21 +1,14 @@
 import {
   Button,
-  Card,
-  CardActions,
-  CardContent,
   Container,
   CssBaseline,
   Grid,
-  Link,
-  Paper,
   Typography,
 } from "@mui/material";
 import * as React from "react";
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { Route } from "react-router-dom";
 
 export default function UserCreate() {
   const [username, setUsername] = React.useState("");

@@ -1,30 +1,21 @@
 import {
   Button,
-  Card,
-  CardActions,
-  CardContent,
   Container,
   CssBaseline,
   Grid,
-  Paper,
   Typography,
 } from "@mui/material";
 import * as React from "react";
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import axios from "axios";
 import Swal from "sweetalert2";
 import {
-  Route,
-  useLocation,
-  Link,
   useParams,
   useNavigate,
 } from "react-router-dom";
 
 export default function UserUpdate() {
   const [data, setData] = React.useState("");
-  const [fetchdata, setFetchData] = React.useState(false);
   const [username, setUsername] = React.useState("");
   const [age, setAge] = React.useState("");
   const { id } = useParams();
@@ -66,7 +57,7 @@ export default function UserUpdate() {
         throw err;
       });
   }, [id]);
-
+console.log(data)
   const handleSubmit = (event: any) => {
     event.preventDefault();
     Swal.fire({
